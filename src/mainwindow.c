@@ -273,7 +273,6 @@ void mainwindow_close_tab(void) {
 }
 /*
  * 'mainwindow_toggle' is called from 'wait_key' and is defined in shortcut.c.
- * mainwindow_toggle_full() is called
  */
 void mainwindow_toggle(int sig) {
     if ((!sig && GTK_WIDGET_VISIBLE(mainwindow)) || (sig && toggled)) {
