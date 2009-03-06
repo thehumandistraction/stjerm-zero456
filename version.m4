@@ -1,1 +1,1 @@
-m4_define([STJERM_VERSION], [0.11.8.20090224])
+m4_define([STJERM_VERSION], [0.12])
