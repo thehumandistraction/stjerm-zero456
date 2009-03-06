@@ -1,0 +1,6 @@
+- Fix fullscreen bug
+- Tweak the man page to fit the standard model (Use author instead of copyright,
+  etc.)
+- Learn SVN!
+- Create UML model of stjerm startup/configuration
+- Redocument code

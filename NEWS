@@ -1,0 +1,19 @@
+Stjerm 0.12
+===========
+
+  * Added copy and paste keyboard shortcuts 'c' and 'v', respectively
+  
+  * Full screen is fixed so it actually works
+  
+  * Keyboard shortcuts to switch to the previous and next tab have been 
+    re-mapped to page up and page down, respectively
+    
+  * Added version information output through --version and --v
+  
+  * When the end or beginning of the tab bar is reached, pressing the 
+    previous/next tab shortcuts will move to the first/last tab, respectively
+    
+  * Many files have been updated to conform to GNU standards (Such as README and
+    ChangeLog)
+    
+  * Version information is now updated through version.m4
