@@ -8,11 +8,10 @@ Stjerm 0.12
     
   * Added version information output through --version and --v
   
-  * When the end or beginning of the tab bar is reached, pressing the 
-    previous/next tab shortcuts will move to the first/last tab, respectively
+  * Tabs now loop when the end or beginning of the tab bar is reached
     
-  * Many files have been updated to conform to GNU standards (Such as README and
-    ChangeLog)
+  * Many files and functions have been updated to conform to GNU standards (Such 
+    as README and print_version)
   
   * Added NEWS and TODO
     

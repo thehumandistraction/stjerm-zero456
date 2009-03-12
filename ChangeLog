@@ -1,3 +1,10 @@
+2009-03-12 Thomas Pifer <zero456@gmail.com>
+
+  * configure.ac: Small changes to give better output and make it easier to 
+  read.
+  
+  * NEWS: Grammitical fixes.
+
 2009-03-06 Thomas Pifer <zero456@gmail.com>
   
   * NEWS: Updated.

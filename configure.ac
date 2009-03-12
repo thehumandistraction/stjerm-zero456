@@ -1,7 +1,9 @@
 # Process this file with autoconf to produce a configure script.
 # some parts are taken from configure.ac from gmpc-svn
 # (see: sarine.nl/gmpc)
+
 m4_include([version.m4])
+
 AC_INIT([stjerm], STJERM_VERSION) #STJERM_VERSION is defined in version.m4
 AC_PREREQ(2.59)
 AC_CONFIG_SRCDIR([src/mainwindow.c])
@@ -49,4 +51,4 @@ AC_FUNC_STAT
 
 AC_OUTPUT([Makefile doc/Makefile src/Makefile])
 
-echo "ready. type make to build..."
+echo "Ready! Type 'make' to build..."
