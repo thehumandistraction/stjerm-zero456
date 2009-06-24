@@ -1,18 +1,19 @@
-Stjerm 0.12
-===========
+NEWS file for Stjerm <http://code.google.com/p/stjerm-terminal-emulator/>
 
+0.13 (2009-06-24):
+  * Man page has been rewritten making it cleaner and more concise
+  * --help and --info options have been alphabetized making it easier to read
+  * Removed version.m4 as it was superfluous (The version number is updated in 
+    cofigure.ac)
+  * An RPM is now available for Fedora 11 users!
+
+0.12 (2009-03-06):
   * Added copy and paste keyboard shortcuts 'c' and 'v', respectively
-  
   * Keyboard shortcuts to switch to the previous and next tab have been 
     re-mapped to page up and page down, respectively
-    
   * Added version information output through --version and --v
-  
   * Tabs now loop when the end or beginning of the tab bar is reached
-    
   * Many files and functions have been updated to conform to GNU standards (Such 
     as README and print_version)
-  
   * Added NEWS and TODO
-    
   * Version information is now updated through version.m4

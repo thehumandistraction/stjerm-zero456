@@ -1,9 +1,56 @@
+2009-06-24 Thomas Pifer <zero456@gmail.com>
+
+  * Removed version.m4 as it was superfluous. 
+  * configure.ac: Version bump to 0.13
+  
+  * NEWS: Updated with information for 0.13.
+  
+  * Run automake and autoheader for 0.13 release.
+  
+2009-05-21 Thomas Pifer <zero456@gmail.com>
+
+  * README: Updated description and added version numbers to dependencies for
+  building.
+  * Updated man page.
+
+2009-05-18 Thomas Pifer <zero456@gmail.com>
+
+  * TODO: Updated.
+
+2009-04-16 Thomas Pifer <zero456@gmail.com>
+  
+  * NEWS: Updated to include release date of 0.12 and a cleaner look.
+  
+  * configure: Updated with 0.13pre version number. 
+
+2009-04-09 Thomas Pifer <zero456@gmail.com>
+
+  * version.m4: Changed version number to 0.13pre.  Newer versions that have yet
+  to be released will now have the suffix pre appended to it.
+
 2009-03-12 Thomas Pifer <zero456@gmail.com>
 
   * configure.ac: Small changes to give better output and make it easier to 
   read.
   
   * NEWS: Grammitical fixes.
+  
+2009-03-11 Thomas Pifer <zero456@gmail.com>
+
+  * TODO: Updated.
+
+2009-03-10 Thomas Pifer <zero456@gmail.com>
+
+  * src/config.c: Alphabetized options, giving a cleaner output when --help and
+  --info are run.
+
+2009-03-09 Thomas Pifer <zero456@gmail.com>
+
+  * Updated man page.
+
+2009-03-07 Thomas Pifer <zero456@gmail.com>
+
+  * Updated man page.
 
 2009-03-06 Thomas Pifer <zero456@gmail.com>
   

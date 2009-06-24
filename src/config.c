@@ -103,29 +103,29 @@ char* conf_get_bg_image(void);
 gboolean conf_get_scroll_on_output(void);
 
 Option options[OPTION_COUNT] = {
-        { "key", "-k", "KEY", "Shortcut key (eg: f12)." },
-        { "mod", "-m", "MODIFIER", "Meta modifier key: shift, control, alt, windows, none." },
-        { "keymod", "-km", "MODIFIER", "Modifier for keyboard shortcuts. Can be a combination (with +) of modifiers (eg: shift+control)." },
-        { "autohide", "-ah", "BOOLEAN", "Whether or not to hide stjerm when it looses focus. Default: true." },
-        { "font", "-fn", "FONT", "Terminal font and size (eg: Sans 10). Default: Bistream Vera Sans 10." },
-        { "background", "-bg", "COLOR", "Background color. Default: Black." },
-        { "foreground", "-fg", "COLOR", "Foreground color. Default: White." },
         { "allowbold", "-ab", "BOOLEAN", "Allow bold fonts or not. Default: true." },
-        { "border", "-b", "TYPE", "Border type: thin, thick, none. Default: none." },
-        { "opacity", "-o", "NUMBER", "Opacity (range: 10 - 100). Default: 100." },
+        { "autohide", "-ah", "BOOLEAN", "Whether or not to hide stjerm when it looses focus. Default: true." },
+        { "background", "-bg", "COLOR", "Background color. Default: Black." },
         { "bgimage", "-bgimg", "FILE", "Background image to use on terminal." },
-        { "width", "-w", "NUMBER", "Window width. Default: 800." },
+        { "border", "-b", "TYPE", "Border type: thin, thick, none. Default: none." },
+        { "colorX", "-cX", "COLOR", "Specify color X of the terminals color palette" },
+        { "font", "-fn", "FONT", "Terminal font and size (eg: Sans 10). Default: Bistream Vera Sans 10." },
+        { "foreground", "-fg", "COLOR", "Foreground color. Default: White." },
         { "height", "-h", "NUMBER", "Window height. Default: 400." },
+        { "key", "-k", "KEY", "Shortcut key (eg: f12)." },
+        { "keymod", "-km", "MODIFIER", "Modifier for keyboard shortcuts. Can be a combination (with +) of modifiers (eg: shift+control)." },
+        { "lines", "-l", "NUMBER", "Scrollback lines. 0 to disable scrollback. Default: 1000." },
+        { "mod", "-m", "MODIFIER", "Meta modifier key: shift, control, alt, windows, none." },
+        { "opacity", "-o", "NUMBER", "Opacity (range: 10 - 100). Default: 100." },
         { "position", "-p", "POSITION", "Window position: top, bottom, left, right. Default: top." },
         { "scrollbar", "-s", "POSITION", "Scrollbar position: left, right, none. Default: none." },
-        { "shell", "-sh", "STRING", "Terminal Shell. Default: the user's default shell." },
-        { "lines", "-l", "NUMBER", "Scrollback lines. 0 to disable scrollback. Default: 1000." },
-        { "showtab", "-st", "VALUE", "Tabbar visibility (one: only visible when > 1 tabs): never, one, always." },
-        { "tabpos", "-tp", "POSITION", "Tabbar position: top, bottom, left, right. Default: bottom." },
-        { "tablabel", "-tl", "STRING", "Label of the tabs. Default: term." },
-        { "tabfill", "-tf", "BOOLEAN", "Whether tabs fill whole tabbar space. Default: true." },
         { "scroll", "-sc", "BOOLEAN", "Whether to scroll the terminal on output. Default: true." },
-        { "colorX", "-cX", "COLOR", "Specify color X of the terminals color palette" }
+        { "shell", "-sh", "STRING", "Terminal Shell. Default: the user's default shell." },
+        { "showtab", "-st", "VALUE", "Tabbar visibility (one: only visible when > 1 tabs): never, one, always." },
+        { "tabfill", "-tf", "BOOLEAN", "Whether tabs fill whole tabbar space. Default: true." },
+        { "tablabel", "-tl", "STRING", "Label of the tabs. Default: term." },
+        { "tabpos", "-tp", "POSITION", "Tabbar position: top, bottom, left, right. Default: bottom." },
+        { "width", "-w", "NUMBER", "Window width. Default: 800." }
 };
 
 pid_t get_stjerm_pid(void) {

@@ -2,9 +2,7 @@
 # some parts are taken from configure.ac from gmpc-svn
 # (see: sarine.nl/gmpc)
 
-m4_include([version.m4])
-
-AC_INIT([stjerm], STJERM_VERSION) #STJERM_VERSION is defined in version.m4
+AC_INIT([stjerm], 0.13) #Program name and version number
 AC_PREREQ(2.59)
 AC_CONFIG_SRCDIR([src/mainwindow.c])
 AC_CONFIG_HEADER([config.h])
