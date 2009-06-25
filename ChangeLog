@@ -7,6 +7,12 @@
   
   * Run automake and autoheader for 0.13 release.
   
+  * config.c (conf_init): Fixed a major bug that caused 'conf_init' to not check 
+  for the 'width' value in 'options' when grabbing settings from the  user's 
+  .Xdefaults. 
+  
+  * Stjerm 0.13 is -now- officially released!
+  
 2009-05-21 Thomas Pifer <zero456@gmail.com>
 
   * README: Updated description and added version numbers to dependencies for

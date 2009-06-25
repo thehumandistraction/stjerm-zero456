@@ -373,7 +373,7 @@ void conf_init(void) {
     char *op;
     int i;
     Option o;
-    for (i = 0; i < OPTION_COUNT - 1; i++) {
+    for (i = 0; i < OPTION_COUNT; i++) {
         o = options[i];
         if ((op = XGetDefault(dpy, "stjerm", o.long_name)))
             read_value(o.long_name, op);
