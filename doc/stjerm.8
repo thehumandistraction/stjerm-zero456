@@ -109,9 +109,9 @@ Tabbar position: top, bottom, left, right. Default: \fIbottom\fR.
 .B "width, \-w"
 Window width. Default: \fI800\fR.
 .SH EXAMPLES
-To run stjerm with F12 as shortcut key, the opacity of 60 and a green foreground color, use:
+To run stjerm with F12 as the shortcut key, an opacity of 60, a green foreground color and a 12-point Liberation Mono font, use:
 
-stjerm -k f12 -o 60 -fg 66ff11
+stjerm -k f12 -o 60 -fg 66ff11 -fn "Liberation Mono 12"
 
 To specify the same options in the .Xdefaults file:
 
@@ -120,6 +120,8 @@ stjerm.key: f12
 stjerm.opacity: 60
 
 stjerm.foreground: #66ff11
+
+stjerm.font: Liberation Mono 12
 .SH "BUGS"
 Report bugs to <zero456@gmail.com>.
 .SH COPYRIGHT
