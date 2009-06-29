@@ -1,3 +1,11 @@
+2009-06-28 Thomas Pifer <zero456@gmail.com>
+
+  * src/main.c (print_version): Capitalized 'Stjerm'.
+
+2009-06-27 Thomas Pifer <zero456@gmail.com>
+
+  * Updated man page.
+
 2009-06-24 Thomas Pifer <zero456@gmail.com>
 
   * Removed version.m4 as it was superfluous. 
@@ -7,7 +15,7 @@
   
   * Run automake and autoheader for 0.13 release.
   
-  * config.c (conf_init): Fixed a major bug that caused 'conf_init' to not check 
+  * src/config.c (conf_init): Fixed a major bug that caused 'conf_init' to not check 
   for the 'width' value in 'options' when grabbing settings from the  user's 
   .Xdefaults. 
   

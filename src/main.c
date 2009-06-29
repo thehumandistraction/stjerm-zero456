@@ -89,7 +89,7 @@ void print_info(void) {
 }
 
 void print_version(void) {
-    printf("stjerm %s\n"
+    printf("Stjerm %s\n"
            "Copyright (C) 2007 Stjepan Glavina\n"
            "Copyright (C) 2007 Markus Gross\n"
            "Copyright (C) 2009 Thomas Pifer\n"
