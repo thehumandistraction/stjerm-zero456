@@ -4,7 +4,7 @@
  *
  * Copyright (C) 2007 - Stjepan Glavina
  * Copyright (C) 2007 - Markus Groß
- * Copyright (C) 2008, 2009 Thomas Pifer
+ * Copyright (C) 2008, 2009, 2011 Thomas Pifer
  * 
  * Stjerm is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -64,6 +64,7 @@ static GdkModifierType _keymod;
 static gboolean _autohide;
 static char _bgimage[200];
 static gboolean _scrolloutput;
+static gboolean _bell;
 
 static void set_border(char*);
 static void set_mod(char*);
@@ -106,6 +107,7 @@ Option options[OPTION_COUNT] = {
         { "allowbold", "-ab", "BOOLEAN", "Allow bold fonts or not. Default: true." },
         { "autohide", "-ah", "BOOLEAN", "Whether or not to hide stjerm when it looses focus. Default: true." },
         { "background", "-bg", "COLOR", "Background color. Default: Black." },
+        { "bell", "-bell", "BOOLEAN", "Whether or not the terminal will make an audible bell. Default: True."},
         { "bgimage", "-bgimg", "FILE", "Background image to use on terminal." },
         { "border", "-b", "TYPE", "Border type: thin, thick, none. Default: none." },
         { "colorX", "-cX", "COLOR", "Specify color X of the terminals color palette" },
@@ -280,9 +282,14 @@ void init_default_values(void) {
     _keymod = GDK_CONTROL_MASK | GDK_SHIFT_MASK;
     _autohide = TRUE;
     _scrolloutput = TRUE;
+    _bell = TRUE;
 }
 
 void read_value(char *name, char *value) {
+
+//The *name and *value are derived from sargv which is given one by one through 
+//a loop from conf_init()
+
     if (name != NULL && value != NULL) {
         if (name[0] == '#')
             return;
@@ -323,7 +330,7 @@ void read_value(char *name, char *value) {
             set_key(value);
         else if (!strcmp("shell", name) || !strcmp("-sh", name))
             strcpy(_shell, value);
-        else if (!strcmp("lines", name) || !strcmp("-bl", name))
+        else if (!strcmp("lines", name) || !strcmp("-l", name))
             _lines = atoi(value);
         else if (!strcmp("showtab", name) || !strcmp("-showtab", name)) {
             if (!strcasecmp(value, "always"))
@@ -357,6 +364,9 @@ void read_value(char *name, char *value) {
             _autohide = parse_bool_str(value, _autohide);
         else if (!strcmp("scroll", name) || !strcmp("-sc", name))
             _scrolloutput = parse_bool_str(value, _scrolloutput);
+        else if (!strcmp("bell", name) || !strcmp("-bell", name))
+            if (!strcasecmp(value, "false"))
+                _bell = FALSE;
     }
 }
 
@@ -396,7 +406,7 @@ void conf_init(void) {
             } else if (!strcmp("--toggle", sargv[i])) {
                 kill(get_stjerm_pid(), SIGUSR1);
                 exit(1);
-            } else if (!strcmp("--version", sargv[i]) || !strcmp("--v", sargv[i])){
+            } else if (!strcmp("--version", sargv[i]) || !strcmp("-v", sargv[i])){
 	     	    print_version();
 		        exit(1);
 	        }
@@ -567,4 +577,9 @@ char* conf_get_bg_image(void) {
 
 gboolean conf_get_scroll_on_output(void) {
     return _scrolloutput;
+}
+
+gboolean conf_get_bell(void)
+{
+    return _bell;
 }

@@ -1,4 +1,4 @@
-.TH STJERM "8" "2009-05-21" "stjerm" ""
+.TH STJERM "8" "2011-01-30" "stjerm" ""
 .SH NAME
 stjerm \- a GTK+\-based drop\-down terminal emulator.
 .SH SYNOPSIS
@@ -31,7 +31,7 @@ Print help information and exit.
 .B "\-\-info"
 Print .Xdefaults options and exit.
 .TP
-.B "\-\-version, \-\-v"
+.B "\-\-version, \-v"
 Print version information and exit.
 .TP
 .B "\-\-toggle"
@@ -45,6 +45,9 @@ Whether or not to hide stjerm when it looses focus. Default: \fItrue\fR.
 .TP
 .B "background, \-bg"
 Background color of the terminal. If the terminal is transparent this is the tint color. Default: \fIBlack\fR.
+.TP
+.B "bell, \-bell"
+Whether or not the terminal will make an audible bell. Default: \fItrue\fR.
 .TP
 .B "bgimage, \-bgimg"
 Background image file. Specify the filename. Default: \fIdisabled\fR.
@@ -109,19 +112,19 @@ Tabbar position: top, bottom, left, right. Default: \fIbottom\fR.
 .B "width, \-w"
 Window width. Default: \fI800\fR.
 .SH EXAMPLES
-To run stjerm with F12 as the shortcut key, an opacity of 60, a green foreground color and a 12-point Liberation Mono font, use:
+To run stjerm with F12 as the shortcut key, an opacity of 60, a green foreground color and an 11-point Liberation Mono font, use:
 
-stjerm -k f12 -o 60 -fg 66ff11 -fn "Liberation Mono 12"
+stjerm -k f12 -o 60 -fg 66ff11 -fn "Liberation Mono 11"
 
 To specify the same options in the .Xdefaults file:
 
 stjerm.key: f12
-
+.br
 stjerm.opacity: 60
-
+.br
 stjerm.foreground: #66ff11
-
-stjerm.font: Liberation Mono 12
+.br
+stjerm.font: Liberation Mono 11
 .SH "BUGS"
 Report bugs to <zero456@gmail.com>.
 .SH COPYRIGHT
@@ -129,7 +132,7 @@ Copyright \(co 2007 Stjepan Glavina
 .br
 Copyright \(co 2007 Markus Gross
 .br
-Copyright \(co 2008, 2009 Thomas Pifer
+Copyright \(co 2008, 2009, 2011 Thomas Pifer
 
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.

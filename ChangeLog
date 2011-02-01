@@ -1,3 +1,47 @@
+2011-01-30 Thomas Pifer <zero456@gmail.com>
+
+  * src/config.c (read_value): Fixed a major oops where the short version of the 
+  'lines' option was '-bl' instead of '-l'. Updated documentation. Added a check
+  for _bell which determines whether the audible bell in the terminal is enabled
+  or not.
+  (_bell): New gboolean.
+  (options): Added information for _bell.
+  (conf_init): Added _bell default value which is TRUE.
+  (conf_get_bell): New function which returns the value of _bell.
+  
+  * src/main.c (print_help): Changed the font example from 'Bitstream Vera Sans 
+  Mono 12' to 'Liberation Mono 11'.
+  (print_version): Updated copyright.
+  
+  * src/stjerm.h (OPTION_COUNT): Incremented it from 23 to 24 to add information
+  about _bell.
+  (conf_get_bell): Declared as extern.
+  
+  *src/term.c (vte_terminal_set_audible_bell): Enables or disables the audible
+  bell depending on the value of _bell through conf_get_bell().
+  
+  * configure.ac (AC_INIT): Version bump to 0.14.
+  (AM_INIT_AUTOMAKE): Added 'dist-xz'.
+  
+  * Updated man page
+  
+  * Updated copyright on all files.
+  
+  * NEWS: Updated with information for 0.14.
+  
+  * TODO: Updated.
+  
+  * Run autogen.sh for 0.14 release.
+  
+  * Stjerm 0.14 released!
+
+2011-01-29 Thomas Pifer <zero456@gmail.com>
+
+  * src/config.c (conf_init): Changed '--v' to '-v' for version info since a 
+  '--' is used for a long version of a command, not a short version.
+  
+  * Updated man page.
+
 2009-06-28 Thomas Pifer <zero456@gmail.com>
 
   * src/main.c (print_version): Capitalized 'Stjerm'.
@@ -35,7 +79,7 @@
   
   * NEWS: Updated to include release date of 0.12 and a cleaner look.
   
-  * configure: Updated with 0.13pre version number. 
+  * configure.ac: Updated with 0.13pre version number. 
 
 2009-04-09 Thomas Pifer <zero456@gmail.com>
 

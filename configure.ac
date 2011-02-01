@@ -2,11 +2,11 @@
 # some parts are taken from configure.ac from gmpc-svn
 # (see: sarine.nl/gmpc)
 
-AC_INIT([stjerm], 0.13) #Program name and version number
+AC_INIT([stjerm], 0.14) #Program name and version number
 AC_PREREQ(2.59)
 AC_CONFIG_SRCDIR([src/mainwindow.c])
 AC_CONFIG_HEADER([config.h])
-AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip]) #Create only a bzip2 archive when running dist
+AM_INIT_AUTOMAKE([dist-bzip2 no-dist-gzip dist-xz]) #Create only a bzip2 archive when running dist
 
 # Checks for programs.
 AC_PROG_CC

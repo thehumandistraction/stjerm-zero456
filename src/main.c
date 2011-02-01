@@ -4,7 +4,7 @@
  *
  * Copyright (C) 2007 - Stjepan Glavina
  * Copyright (C) 2007 - Markus Groß
- * Copyright (C) 2008, 2009 Thomas Pifer
+ * Copyright (C) 2008, 2009, 2011 Thomas Pifer
  *
  * Stjerm is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -55,8 +55,8 @@ void print_help(void) {
     }
     printf("\t\tYou may specify no palette, or a complete one with 16 total colors\n"
            "\t\tFor this you have to use -c0, -c1, ..., -c15.\n\n"
-           "Note:     any colors in hex codes are entered without the leading '#'.\n\n"
-           "Examples: %s -fn \"Bitstream Vera Sans Mono 12\" -bg white -k F12 -sh /bin/bash\n"
+           "Note:     Any colors in hex codes are entered without the leading '#'.\n\n"
+           "Examples: %s -fn \"Liberation Mono 11\" -bg white -k F12 -sh /bin/bash\n"
            "          %s -bg black -fg green -w 800 -h 405 -s right -m alt -k f -l 10000\n"
            "          %s -b thick -w 500 -p left -t best -o 90 -m shift -k tab -sh /bin/zsh\n\n"
            "Use --info to get a list of available .Xdefaults options for stjerm.\n\n"
@@ -92,7 +92,7 @@ void print_version(void) {
     printf("Stjerm %s\n"
            "Copyright (C) 2007 Stjepan Glavina\n"
            "Copyright (C) 2007 Markus Gross\n"
-           "Copyright (C) 2009 Thomas Pifer\n"
+           "Copyright (C) 2011 Thomas Pifer\n"
            "License GPLv2+: GNU GPL version 2 or later <http://gnu.org/licenses/gpl.html>\n"
            "This is free software: you are free to change and redistribute it.\n"
            "There is NO WARRANTY, to the extent permitted by law.\n", 

@@ -4,7 +4,7 @@
  *
  * Copyright (C) 2007 - Stjepan Glavina
  * Copyright (C) 2007 - Markus Groß
- * Copyright (C) 2008, 2009 Thomas Pifer
+ * Copyright (C) 2008, 2009, 2011 Thomas Pifer
  *
  * Stjerm is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -66,6 +66,7 @@ GtkWidget* build_term(void) {
     vte_terminal_set_scrollback_lines(VTE_TERMINAL(term), conf_get_lines());
     vte_terminal_set_backspace_binding(VTE_TERMINAL(term), 
             VTE_ERASE_ASCII_DELETE);
+    vte_terminal_set_audible_bell (VTE_TERMINAL(term), conf_get_bell());
     
     term_connect_signals(term);
     return term;

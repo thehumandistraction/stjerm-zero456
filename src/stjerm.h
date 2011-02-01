@@ -4,7 +4,7 @@
  *
  * Copyright (C) 2007 - Stjepan Glavina
  * Copyright (C) 2007 - Markus Groß
- * Copyright (C) 2008, 2009 Thomas Pifer
+ * Copyright (C) 2008, 2009, 2011 Thomas Pifer
  *
  * Stjerm is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -62,7 +62,7 @@ typedef struct {
     char desc[150];
 } Option;
 
-#define OPTION_COUNT 23
+#define OPTION_COUNT 24
 
 extern void print_help(void);
 extern void print_info(void);
@@ -104,6 +104,7 @@ extern GdkModifierType conf_get_key_mod(void);
 extern gboolean conf_get_auto_hide(void);
 extern char* conf_get_bg_image(void);
 extern gboolean conf_get_scroll_on_output();
+extern gboolean conf_get_bell();
 
 #endif /* __STJERM_H__ */
 

@@ -4,7 +4,7 @@
  *
  * Copyright (C) 2007 - Stjepan Glavina
  * Copyright (C) 2007 - Markus Groß
- * Copyright (C) 2008, 2009 Thomas Pifer
+ * Copyright (C) 2008, 2009, 2011 Thomas Pifer
  *
  * Stjerm is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
