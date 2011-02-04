@@ -406,7 +406,7 @@ void conf_init(void) {
             } else if (!strcmp("--toggle", sargv[i])) {
                 kill(get_stjerm_pid(), SIGUSR1);
                 exit(1);
-            } else if (!strcmp("--version", sargv[i]) || !strcmp("-v", sargv[i])){
+            } else if (!strcmp("--version", sargv[i]))){
 	     	    print_version();
 		        exit(1);
 	        }

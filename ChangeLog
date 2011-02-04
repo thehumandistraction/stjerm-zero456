@@ -1,3 +1,13 @@
+2011-02-04 Thomas Pifer <zero456@gmail.com>
+
+  * Begin new branch and version update for 0.15
+  
+  * src/config.c (conf_init): Removed '-v' as an option for version information
+  as the GNU standard for version information is '--version' while '-v' is 
+  usually reserved for verbose. 
+  
+  * Updated man page.
+
 2011-01-30 Thomas Pifer <zero456@gmail.com>
 
   * src/config.c (read_value): Fixed a major oops where the short version of the 

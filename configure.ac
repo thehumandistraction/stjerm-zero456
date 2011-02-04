@@ -2,7 +2,7 @@
 # some parts are taken from configure.ac from gmpc-svn
 # (see: sarine.nl/gmpc)
 
-AC_INIT([stjerm], 0.14) #Program name and version number
+AC_INIT([stjerm], 0.15pre) #Program name and version number
 AC_PREREQ(2.59)
 AC_CONFIG_SRCDIR([src/mainwindow.c])
 AC_CONFIG_HEADER([config.h])
