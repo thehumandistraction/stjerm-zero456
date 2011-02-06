@@ -1,3 +1,19 @@
+2011-02-05 Thomas Pifer <zero456@gmail.com>
+
+  * Began the long and arduous task of porting stjerm to building through cmake
+  
+  * src/main.c(print_version): Renamed STJERM_VERSION to 'version' as the former
+  was superfluous and to help with confusion withe the version variable defined
+  in the cmake files.
+  
+  * CMakeLists.txt: Added. This is the main cmake list.
+  
+  * version.h.in: Added. This will now track the version names and numbers.
+  
+  * src/CMakeLists.txt: Added. This handles the files in the src directory.
+  
+  * Updated documentation pertaining to the porting.
+
 2011-02-04 Thomas Pifer <zero456@gmail.com>
 
   * Begin new branch and version update for 0.15

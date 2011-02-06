@@ -1,0 +1,11 @@
+#ifndef VERSION_H
+#define VERSION_H
+
+/*This header file defines the version name and number for stjerm when built 
+with cmake. The variable @stjerm_version@ is replaced with the information of 
+the variable of the same name in CMakeLists.txt. version is the variable that 
+holds the information for stjerm to read.  Note the quotes around 
+@stjerm_version@ which allows it to be read as a string.*/
+
+#define version "@stjerm_version@"
+#endif
