@@ -11,8 +11,8 @@ For building and installation instructions, please see the file INSTALL.
 
 Dependencies for building:  
   * pkg-config
-  * GTK+ 2 (>= 2.10)
-  * VTE (>= 0.16)
+  * GTK+ 2 (>= 2.22)
+  * VTE (>= 0.26)
 
 The two subdirectories, 'src' and 'doc', contain the source code files and 
 manual for Stjerm, respectively.

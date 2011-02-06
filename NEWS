@@ -1,5 +1,12 @@
 NEWS file for Stjerm <http://code.google.com/p/stjerm-terminal-emulator/>
 
+0.15 (<insert date>)
+  * Stjerm now needs at least GTK version 2.22 and VTE 0.26 to build
+  * WIP: Stjerm is now built using cmake.
+  * Removed '-v' as an option for version information. This is to better conform 
+    to the GNU standards where '-v' is used for verbose output. '--version' 
+    remains unaffected.
+
 0.14 (2011-01-30)
   * New feature: You can now set whether you want an audible bell enabled for
     the terminal though the .Xdefaults and runtime arguments bell and -bell, 
