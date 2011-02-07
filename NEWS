@@ -8,6 +8,8 @@ NEWS file for Stjerm <http://code.google.com/p/stjerm-terminal-emulator/>
   * Removed '-v' as an option for version information. This is to better conform 
     to the GNU standards where '-v' is used for verbose output. '--version' 
     remains unaffected.
+  * Sadly, I'm going to discontinue making xz archives for the source packages,
+    at least until CMake adds support for it.
 
 0.14 (2011-01-30)
   * New feature: You can now set whether you want an audible bell enabled for
