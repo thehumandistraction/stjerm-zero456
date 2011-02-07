@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8)
 project(stjerm)
 
 # Version number
-set(stjerm_version 0.15pre)
+set(stjerm_version "0.15pre")
 
 # This takes the file version.h.in and replaces it with version.h.  This allows
 # the version name and number defined above to be used by stjerm.  See the file
@@ -34,7 +34,17 @@ link_libraries(${GTK_LIBRARIES}
 link_directories(${GTK_LIBRARY_DIRS}  
                  ${VTE_LIBRARY_DIRS})
                 
-add_subdirectory(src) #Move to the src directory and run the CMakeLists.txt there                 
+add_subdirectory(src) #Move to the src directory and run the CMakeLists.txt there  
+add_subdirectory(doc) #Move to the doc directory and run the CMakeLists.txt there            
 
-#INCLUDE(CPack)
-#install(TARGETS src/stjerm DESTINATION bin)
+# Set CPack variables for stjerm.  This allows us to build a tarball for stjerm
+# with cmake.
+
+set(CPACK_SOURCE_GENERATOR "TBZ2")
+set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+set(CPACK_VERSION_MAJOR ${stjerm_version})
+set(CPACK_SOURCE_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_VERSION_MAJOR}")
+
+
+INCLUDE(CPack)
+

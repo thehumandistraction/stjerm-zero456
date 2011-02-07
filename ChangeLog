@@ -2,13 +2,21 @@
 
   * CMakeLists.txt: Removed unnecessary dependecy checks: Stjerm only needs GTK
   and VTE to build. Updated version needed to build Stjerm to GTK 2.22 and VTE
-  0.26.
+  0.26. Added CPack support so we can make tarballs through make package_source.
+  (Though this means no xz archives for source builds until CMake adds support 
+  for it.) This may eventually be used to also build the RPM and DEB files 
+  directly.
   
   * README: Updated version needed to build Stjerm to GTK 2.22 and VTE
   0.26.
   
   * NEWS: Updated.
-
+  
+  * src/CMakeLists.txt: Updated and documented.
+  
+  * doc/CMakeLists.txt: Added. This installs stjerm's man page onto the system.
+  
+  
 2011-02-05 Thomas Pifer <zero456@gmail.com>
 
   * Began the long and arduous task of porting stjerm to building through cmake
